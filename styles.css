@@ -1,0 +1,306 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/* Reset and Common Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-image: url("core/bg.jpg");
+  background-color: rgb(161, 129, 86);
+}
+
+/* Container Styles */
+.container {
+  position: relative;
+  max-width: 1000px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.container-reg {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.container header {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: 500;
+}
+
+.container header::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 3px;
+  width: 27px;
+  background-color: burlywood;
+}
+
+.container-reg header {
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: 500;
+}
+
+.container-reg header::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 3px;
+  width: 27px;
+  background-color: burlywood;
+}
+
+/* Form Styling */
+.container form {
+  margin-top: 16px;
+  min-height: 480px;
+  background-color: #fff;
+}
+
+.form .title {
+  font-size: 1.5rem;
+  color: rgb(19, 19, 19);
+  margin: 20px 0;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: rgb(19, 19, 19);
+  margin: 20px 0;
+}
+
+.details-box,
+.details.details-box {
+  font-weight: lighter;
+  padding: 20px;  /* Add padding */
+  background-color: #fafafa;  /* Light background for better contrast */
+  border-radius: 8px;  /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Add subtle shadow for depth */
+  margin-bottom: 20px;  /* Space between details and form */
+  border: 1px solid #e0e0e0;  /* Soft border */
+}
+
+/* Additional visual effect to highlight the details */
+.details-box:hover,
+.details.details-box:hover {
+  background-color: #f0f0f0;  /* Darken background on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);  /* Increase shadow on hover */
+  transition: all 0.3s ease-in-out;  /* Smooth hover effect */
+}
+
+.form .inputAuth {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.inputAuth label,
+.inputPlanner label {
+  font-size: 1rem;
+  color: rgb(19, 19, 19);
+}
+
+.inputAuth input,
+.inputPlanner input,
+input[type="text"],
+input[type="password"] {
+  outline: none;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #333;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 10px;
+  width: 100%;
+  margin: 8px 0;
+  transition: box-shadow 0.3s ease;
+}
+
+.inputAuth input:is(:focus, :valid),
+.inputPlanner input:is(:focus, :valid) {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-color: burlywood;
+}
+
+/* Button Styles */
+.container form button,
+input[type="submit"] {
+  height: 45px;
+  width: 100%;
+  max-width: 200px;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 25px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: rgb(240, 209, 169);
+}
+
+.container form button:hover,
+input[type="submit"]:hover {
+  background-color: burlywood;
+  color: #fff;
+}
+
+/* Link Styles */
+a {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 10px;
+  color: rgb(175, 131, 73);
+  background-color: transparent;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+a:hover {
+  background-color: rgb(240, 209, 169);
+  color: #000;
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Adjust the spacing between the buttons as needed */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+  
+  table, th, td {
+    font-size: 12px;
+  }
+}
+
+/* Message Styles */
+.message,
+.message1 {
+  background-color: #f8d7da; 
+  color: #721c24; 
+  border: 1px solid #f5c6cb;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+}
+
+table th {
+  background-color: #f0d1a9;
+  text-align: center;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Gender Box Styles */
+.form .gender-box {
+  margin-top: 20px;
+}
+
+.gender-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.form .gender {
+  column-gap: 5px;
+}
+
+.gender input {
+  accent-color: burlywood;
+  cursor: pointer;
+}
+
+.gender label {
+  color: #707070;
+  cursor: pointer;
+}
+
+/* Select Box Styles */
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+  
+  table, th, td {
+    font-size: 12px;
+  }
+}
